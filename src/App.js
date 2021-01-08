@@ -5,15 +5,10 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { routes } from 'config/routes/routes';
-import { Home, Auth, Error404, Dashboard } from 'components/pages';
+import { Home, Login, Error404, Dashboard } from 'components/pages';
 
 // App routes
-const {
-  home,
-  dashboard,
-  error,
-  auth: { mainAuthRoute },
-} = routes;
+const { home, dashboard, error, login } = routes;
 
 // Main Component
 const App = () => {
@@ -24,7 +19,7 @@ const App = () => {
           {/* Nav */}
           <Switch>
             <Route exact path={home} component={Home} />
-            <Route exact path={mainAuthRoute} component={Auth} />
+            <Route exact path={login} component={Login} />
             <Route exact path={dashboard} component={Dashboard} />
             <Route exact path={error} component={Error404} />
           </Switch>
