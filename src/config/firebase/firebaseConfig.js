@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-export const firebaseConfig = {
+export const config = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_PROJECT_ID,
@@ -11,7 +11,12 @@ export const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
-firebase.initializeApp(firebaseConfig);
+// Check if we have already initialized firebase
+// 0 => false
+// !0 => true
+if (!firebase.apps.length) {
+  firebase.initializeApp(config);
+}
 
 const auth = firebase.auth();
 
