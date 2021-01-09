@@ -1,9 +1,20 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes } from 'config/routes/routes';
-import { Home, Login, Error404, Dashboard } from 'components/pages';
-import { MainTemplate } from 'components/templates';
+import {
+  Home,
+  Login,
+  Error404,
+  Dashboard,
+  MainTemplate,
+  Navbar,
+} from 'components';
 // App routes
-const { home, dashboard, error, login } = routes;
+const {
+  home,
+  dashboard,
+  error,
+  login: { mainAuthRoute },
+} = routes;
 
 // Main Component
 const App = () => {
@@ -12,12 +23,12 @@ const App = () => {
       <Router>
         <>
           <MainTemplate>
-            {/* Nav */}
+            <Navbar />
             <Switch>
               <Route exact path={home} component={Home} />
-              <Route exact path={login} component={Login} />
-              <Route exact path={dashboard} component={Dashboard} />
-              <Route exact path={error} component={Error404} />
+              <Route path={mainAuthRoute} component={Login} />
+              <Route path={dashboard} component={Dashboard} />
+              <Route path={error} component={Error404} />
             </Switch>
           </MainTemplate>
         </>

@@ -1,8 +1,8 @@
 export const routes = {
   home: '/',
-  auth: {
-    mainAuthRoute: '/auth',
-    nestedRoute: { login: '/login', register: '/register' },
+  login: {
+    mainAuthRoute: '/login',
+    nestedRoute: '/register',
   },
   dashboard: '/dashboard',
   error: '*',
