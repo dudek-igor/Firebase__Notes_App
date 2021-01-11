@@ -2,9 +2,8 @@ import { useState } from 'react';
 import { Menu, Hamburger } from 'components';
 import Logo from 'assets/AppLogo';
 import { FaUserCircle } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
 import { routes } from 'config/routes/routes';
-import { StyledWrapper } from './Navbar.styled';
+import { StyledWrapper, StyledNavLink } from './Navbar.styled';
 
 // App Routes
 const {
@@ -18,12 +17,12 @@ const Navbar = () => {
   return (
     <StyledWrapper>
       <Hamburger handleMenu={{ openMenu, setOpenMenu }} />
-      <NavLink to={home}>
+      <StyledNavLink onClick={() => setOpenMenu(false)} to={home}>
         <Logo />
-      </NavLink>
-      <NavLink to={mainAuthRoute}>
+      </StyledNavLink>
+      <StyledNavLink onClick={() => setOpenMenu(false)} to={mainAuthRoute}>
         <FaUserCircle />
-      </NavLink>
+      </StyledNavLink>
       <Menu handleMenu={{ openMenu, setOpenMenu }} />
     </StyledWrapper>
   );
