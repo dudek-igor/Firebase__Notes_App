@@ -1,0 +1,5 @@
+export const authorizationConstans = {
+  USER_LOADING: 'USER_LOADING',
+  LOGIN_USER_SUCCESS: 'LOGIN_USER_SUCCESS',
+  LOGIN_USER_FAILURE: 'LOGIN_USER_FAILURE',
+};

@@ -6,6 +6,9 @@ export { default as Menu } from './molecules/menu/Menu';
 
 // Organisms
 export { default as Navbar } from './organisms/navbar/Navbar';
+export { default as LoginForm } from './organisms/loginForm/LoginForm';
+export { default as RegisterForm } from './organisms/registerForm/RegisterForm';
+export { default as ResetPasswordForm } from './organisms/resetPasswordForm/ResetPasswordForm';
 
 // App Pages
 export { default as Home } from './pages/home/Home';
