@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes } from 'config/routes/routes';
+import { createStore } from 'data';
+import { Provider } from 'react-redux';
 import {
   Home,
   Login,
@@ -8,6 +10,7 @@ import {
   MainTemplate,
   Navbar,
 } from 'components';
+
 // App routes
 const {
   home,
@@ -15,11 +18,12 @@ const {
   error,
   login: { mainAuthRoute },
 } = routes;
-
 // Main Component
 const App = () => {
+  // Store
+  const store = createStore();
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <>
           <MainTemplate>
@@ -33,7 +37,7 @@ const App = () => {
           </MainTemplate>
         </>
       </Router>
-    </>
+    </Provider>
   );
 };
 

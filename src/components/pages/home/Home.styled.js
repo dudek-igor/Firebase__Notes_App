@@ -5,7 +5,7 @@ const animateSVG = keyframes`
     stroke-dashoffset: -60;
     fill: transparent;
     }
-  85% {
+  80% {
     stroke-dashoffset: ${({ strokeDashoffset }) => strokeDashoffset};
     fill: transparent;
   }
