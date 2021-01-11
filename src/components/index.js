@@ -1,4 +1,5 @@
 // Atoms
+export { default as Hamburger } from './atoms/hamburger/Hamburger';
 
 // Molecules
 export { default as Menu } from './molecules/menu/Menu';

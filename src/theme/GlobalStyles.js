@@ -13,11 +13,13 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     padding: 0;
     margin: 0;
+    color: ${({ theme }) => theme.black};
   }
  
   body{
     min-height: 100vh;
     font-family: "Montserrat", sans-serif;
+    background-color: ${({ theme }) => theme.white}
   }
 `;
 
